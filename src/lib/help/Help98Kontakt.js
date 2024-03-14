@@ -13,16 +13,6 @@ const Component = ({ email }) => {
       sectionBsStyle="warning"
       sectionContent={
         <div>
-          <p>
-            Für telefonische Auskünfte zum Umgang mit dem Auskunfts- und
-            Informationssystem Starkregen (AIS) stehen Ihnen die
-            Mitarbeiterinnen und Mitarbeiter der cismet GmbH zur Verfügung.
-          </p>
-          <p>
-            Weitere Informationen zum Thema „Schutz vor Starkregen“ finden Sie
-            auf der Homepage der Sweco GmbH.
-          </p>
-
           <p style={{ display: "flex" }}>
             <div>
               Stadt
