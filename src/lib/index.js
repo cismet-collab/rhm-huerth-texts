@@ -7,11 +7,11 @@ import {
   Help99Footer,
 } from "@cismet-collab/rainhazardmaps-base-texts";
 
-import Help10AllgemeineHinweise from "./help/Help10AllgemeineHinweise";
-import Help15Datengrundlage from "./help/Help15Datengrundlage";
+import Help10Datengrundlage from "./help/Help10Datengrundlage";
 import Help20Karteninhalt from "./help/Help20Karteninhalt";
 import Help30InKartePositionieren from "./help/Help30InKartePositionieren";
 import Help40MeinStandort from "./help/Help40MeinStandort";
+import Help45ZeitlicherVerlauf from "./help/Help45ZeitlicherVerlauf";
 import Help50WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
 import Help60SimulierteSzenarien from "./help/Help60SimulierteSzenarien";
 import Help70AussagekraftDerSimulationen from "./help/Help70AussagekraftDerSimulationen";
@@ -28,11 +28,12 @@ const getCollabedHelpComponentConfig = ({
   const menuIcon = "info";
   const menuTitle = "Kompaktanleitung und Hintergrundinformationen";
   const menuSections = [
-    <Help10AllgemeineHinweise key="AllgemeineHinweise" />,
-    <Help15Datengrundlage key="Datengrundlage" />,
+    // <Help10AllgemeineHinweise key="AllgemeineHinweise" />,
+    <Help10Datengrundlage key="Datengrundlage" />,
     <Help20Karteninhalt key="Karteninhalt" />,
     <Help30InKartePositionieren key="InKartePositionieren" />,
     <Help40MeinStandort key="MeinStandort" />,
+    <Help45ZeitlicherVerlauf key="ZeitlicherVerlauf" />,
     <Help50WasserstandAbfragen key="WasserstandAbfragen" />,
     <Help60SimulierteSzenarien key="SimulierteSzenarien" />,
     <Help70AussagekraftDerSimulationen key="AussagekraftDerSimulationen" />,
@@ -42,6 +43,15 @@ const getCollabedHelpComponentConfig = ({
   ];
   const menuFooter = (
     <Help99Footer
+      hintergrundkartenText=" DOP © Geobasis NRW  | Basiskarte (grau/bunt) © BKG basemap.de"
+      taglineModelling={
+        <div>
+          <b>Modellierung</b> (Version 1.0 | 02/2024):{" "}
+          <a target="_model" href="https://www.sweco-gmbh.de/">
+            Sweco GmbH
+          </a>{" "}
+        </div>
+      }
       version={version}
       reactCismapRHMVersion={reactCismapRHMVersion}
       logoUrl={footerLogoUrl}

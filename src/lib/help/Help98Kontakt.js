@@ -1,8 +1,7 @@
 import React from "react";
 import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
 import cismetLogo from "./assets/cismetSignet2k.png";
-import pecherLogo from "./assets/pecher.png";
-import klasLogo from "./assets/Signet_AIS_RZ.png";
+import swecoLogo from "./assets/sweco.png";
 import customerLogo from "./assets/customerLogo.png";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
@@ -21,7 +20,7 @@ const Component = ({ email }) => {
           </p>
           <p>
             Weitere Informationen zum Thema „Schutz vor Starkregen“ finden Sie
-            auf der Homepage der Dr. Pecher AG.
+            auf der Homepage der Sweco GmbH.
           </p>
 
           <p style={{ display: "flex" }}>
@@ -56,11 +55,8 @@ const Component = ({ email }) => {
                 </td>
                 <td style={{ textAlign: "left", paddingBottom: 20 }}>
                   <strong>
-                    Aufbau und Bereitstellung AIS Starkregenvorsorge
+                    Aufbau und Bereitstellung der Starkregengefahrenkarte
                   </strong>
-                </td>
-                <td style={{ textAlign: "left", paddingBottom: 20 }}>
-                  <strong>Konzeption des AIS Starkregenvorsorge</strong>
                 </td>
               </tr>
               <tr>
@@ -68,8 +64,8 @@ const Component = ({ email }) => {
                   <img
                     target="_contacts"
                     alt="Logo Pecher AG"
-                    height="40"
-                    src={pecherLogo}
+                    height="55"
+                    src={swecoLogo}
                   />
                 </td>
                 <td style={{ textAlign: "left", paddingBottom: 20 }}>
@@ -80,28 +76,18 @@ const Component = ({ email }) => {
                     src={cismetLogo}
                   />
                 </td>
-                <td style={{ textAlign: "left", paddingBottom: 20 }}>
-                  <img
-                    target="_contacts"
-                    alt="Logo KLAS Bremen"
-                    height="40"
-                    src={klasLogo}
-                  />
-                </td>
               </tr>
               <tr>
                 <td style={{ verticalAlign: "bottom" }}>
-                  Dr. Pecher AG
+                  Sweco GmbH
                   <br />
-                  Klinkerweg 5<br />
-                  40699 Erkrath
+                  Graeffstr. 5<br />
+                  50823 Köln
                   <br />
-                  Telefon: 02104 93 96-0
+                  Telefon: 0221 574020
                   <br />
                   E-Mail:{" "}
-                  <a href="mailto:mail.erkrath@pecher.de">
-                    mail.erkrath@pecher.de
-                  </a>
+                  <a href="mailto:info@sweco-gmbh.de">info@sweco-gmbh.de</a>
                 </td>
                 <td style={{ verticalAlign: "bottom" }}>
                   cismet GmbH
@@ -110,13 +96,8 @@ const Component = ({ email }) => {
                   Tholey ▪️ Saarbrücken <br />
                   Telefon: 0681 965 901-20
                   <br />
-                  <a href="https://cismet.de/" title={"and it just works"}>
+                  <a href="https://cismet.de/" title={"... one step ahead"}>
                     https://cismet.de/
-                  </a>
-                </td>
-                <td style={{ verticalAlign: "bottom" }}>
-                  <a href="https://www.klas-bremen.de/">
-                    https://www.klas-bremen.de/
                   </a>
                 </td>
               </tr>

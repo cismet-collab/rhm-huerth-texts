@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 const Component = () => {
@@ -15,136 +14,106 @@ const Component = () => {
       sectionContent={
         <div>
           <p>
-            Die Starkregengefahrenkarte zeigt die Ergebnisse von Simulationen,
-            die dem heutigen Stand der Technik entsprechen. Die Berechnungen
-            basieren auf einem vereinfachten Modell der tatsächlichen
-            Verhältnisse, mit dem sich kritischere Bereiche jedoch gut bestimmen
-            lassen. Für eine noch differenziertere Modellierung müssten höher
-            aufgelöste Geländedaten sowie detailliertere hydrologischen
-            Grundlagen vorliegen und kleinräumige Strukturen wie Gartenmauern
-            detailliert eingearbeitet werden.{" "}
+            Unsere Starkregengefahrenkarte zeigt die Ergebnisse von
+            Simulationen, die dem heutigen Stand der Technik entsprechen. Die
+            Berechnungen basieren auf einem vereinfachten Modell der
+            tatsächlichen Verhältnisse. Für eine noch differenziertere
+            Modellierung fehlen zum einen die Daten, zum anderen ließe sich die
+            automatisierte Berechnung nicht mehr in erlebbarer Zeit durchführen!{" "}
           </p>
 
-          <p>Was sind die wichtigsten Annahmen, die getroffen wurden?</p>
+          <p>
+            Was sind die wichtigsten Vereinfachungen, die wir vornehmen mussten?
+          </p>
 
           <ul>
             <li>
-              Abfließendes Regenwasser findet in Kellergeschossen oder
-              Tiefgaragen ein Rückhaltevolumen, das nicht berücksichtigt werden
-              konnte. Hierzu fehlen weitergehende Daten. Zudem sind die
-              Verhältnisse in den Gebäuden aufgrund der unbekannten Ein- und
-              Austrittspunkte auch noch nicht modellierbar.
+              Das abfließende Regenwasser findet in{" "}
+              <strong>Kellergeschossen</strong>, die als sog.{" "}
+              <strong>Retentionsräume</strong> wirken, ein Rückhaltevolumen, das
+              wir nicht berücksichtigt haben. Hierzu fehlen uns die Daten. Es
+              ist wegen der unbekannten Eintrittspunkte auch nicht modellierbar,
+              in welche Kellergeschosse tatsächlich Wasser hineinlaufen würde!
             </li>
 
             <li>
-              Variable Anteile des Regenwassers versickern oder verdunsten in
-              der Realität. Für die Simulationen wurden räumlich verteilte
-              Versickerungseffekte angesetzt. Die Versickerung ist jedoch stark
-              von den Ausgangsbedingungen abhängig. Hat es bpsw. vor einem
-              Starkregen bereits geregnet, versickert weniger Wasser. Ist der
-              Boden andersherum zu trocken, ist die Anfangsinfiltration sehr
-              gering, d. h. dass auch dann zunächst weniger Wasser versickert
-              und mehr Wasser abflusswirksam wird. Insbesondere in den nicht
-              befestigten Außenbereichen sind diese Variationen und
-              Einflussmöglichkeiten zu berücksichtigen. Weitere hydrologische
-              Prozesse, z. B. Interzeption, werden nicht berücksichitgt. Die
-              Verdunstung spielt bei den hier betrachteten kurzen Niederschlägen
-              nur eine untergeordnete Rolle.
-            </li>
-
-            <li>
-              In Abhängigkeit der Flächennutzung wurden verschiedene Rauheiten
-              angesetzt. Dies führt zu unterschiedlichen
-              Abflussgeschwindigkeiten auf den Oberflächen. Auf land- und
-              forstwirtschaftlich genutzten Flächen sowie Grünflächen läuft das
-              Oberflächenwasser aufgrund der Vegetation langsamer ab. Im
-              Gegensatz dazu läuft auf befestigen Flächen wie Straßen das
-              Regenwasser schneller ab.
-            </li>
-
-            <li>
-              Das Kanalnetz wurde vereinfacht über einen Verlustansatz
-              berücksichtigt. Zu detaillierten Wirkungen von Abflüssen innerhalb
-              des Kanalnetzes liegen in den Kommunen ggf. gesonderte
-              Fachberechnungen vor. Die dargestellten Starkregen zeichnen sich
-              durch hohe Regenintensitäten oberhalb der Bemessungsgrenze des
-              Kanalnetzes aus. Über das Kanalnetz kann zwar ein gewisses
-              Niederschlagsvolumen aufgenommen und abgeführt werden, allerdings
-              sind die Kanalnetze nicht für die dargestellten Starkregen
-              dimensioniert und müssen es auch nicht sein. Daher fließen bei den
-              dargestellten Starkregen große Anteile oberirdisch ab oder können
-              nicht mehr in das Kanalnetz eintreten.
+              Teile des Regenwassers können in der Realität durch{" "}
+              <strong>Verdunstung</strong> verschwinden. Diesen Effekt haben wir
+              aus fachlichen Gründen bewusst vernachlässigt. Die Verdunstung
+              spielt im Starkregenfall nur eine untergeordnete Rolle.
             </li>
           </ul>
-
           <p>
-            <strong>
-              Die Modellannahmen, die stadtgebietsweite Niederschlagsbelastung
-              und Fehler im Geländemodell können dazu führen, dass es zu
-              Abweichungen zwischen den Simulationsergebnissen und beobachteten
-              Überflutungen infolge von Starkregen kommen kann. Niederschläge
-              der Stufe SRI 7 bzw. 9/10 können daher je nach Randbedingungen in
-              der Realität auch etwas geringere oder höhere Wassertiefen auf der
-              Geländeoberfläche zur Folge haben.
-            </strong>{" "}
-            Die unterschiedlichen Betroffenheiten im Stadtgebiet lassen sich
-            aber sehr gut mit den Ergebnisdarstellungen aufzeigen. Die
-            dargestellten Szenarien (außergewöhnliches und extremes
-            Starkregenereignis) zeigen eine mögliche Spannweite der
-            Überflutungen im Modell auf. Je nach Betroffenheit und
-            Schadenspotential lassen sich auf dieser Grundlage Vorsorgemaßnahmen
-            bewerten.
-          </p>
-
-          <p>
-            <strong>
-              {" "}
-              Bitte berücksichtigen Sie, dass die Ergebnisse des dritten
-              Szenarios (Simulation des Extremereignisses vom 14. Juli 2021)
-              nicht unmittelbar mit den Ergebnissen der Modellregen (Szenario 1
-              und 2) verglichen werden können.{" "}
-            </strong>{" "}
-            Das Niederschlagsereignis im Juli 2021 war ein Ausnahmeereignis,
-            welches aus infolge vieler Randbedingungen und Umstände entstanden
-            ist. Alle Randbedingungen können im Modell nicht abgebildet werden.
-            Die Simulationsergebnisse jenes Niederschlages basieren entsprechend
-            lediglich auf der Grundlage des Niederschlagsverlaufes, der damals
-            stattgefunden hat. Weitere hydrologische Grundlagen, wie bspw.
-            Hochwassereinflüsse oder besondere Umstände, die bspw. zu Zerstörung
-            von Brücken oder Gebäuden geführt haben, können nicht abgebildet
-            werden und die Ergebnisse beeinflussen. Bereiche in der Nähe großer
-            Gewässer oder jener Gewässer, die unter besonderem
-            Hochwassereinfluss stehen können, sollten grundsätzlich nur unter
-            Hinzunahme und Berücksichtigung der geltenden
-            Hochwassergefahrenkarten, welche in einem Layer in der Darstellung
-            ergänzt werden können, interpretiert werden. Weiterhin ist zu
-            bedenken, dass das für die Simulation verwendete Geländemodell aus
-            Befliegungsdaten stammt, die nach der Flut aufgenommen wurden. Auch
-            hier können daher Differenzen zwischen den Simulationsergebnissen
-            und den damaligen Folgen und Geschehnissen auftreten. Bereiche, in
-            denen infolge der Flut derzeit große, für das Abflussgeschehen
-            bedeutsame Maßnahmen in Umsetzung sind, werden daher in der Karte
-            mit einem extra Layer abgedeckt, um Irritationen und
-            Missverständnisse zu vermeiden. Wir möchten betonen, dass der Fokus
-            dieser Karte auf der Starkregenvorsorge liegt und nicht auf der
-            Reproduktion bzw. Imitation des realen Ereignisses von 2021.
+            In Version 2.1 der Simulationsberechnungen haben wir erstmalig den
+            Effekt der <strong>Versickerung</strong> mit einem moderaten Ansatz
+            berücksichtigt, um die mittleren Verhältnisse bei Starkregen
+            abzubilden. Die dafür erforderlichen Daten zum Versiegelungsgrad der
+            Oberfläche stammen aus dem Versiegelungsdaten-Informationssystem
+            VerDIS der Stadtverwaltung Hürth und aus der sog.
+            &quot;tatsächlichen Nutzung&quot; des
+            Liegenschaftskataster-Fachverfahrens ALKIS. Es gibt keine
+            Möglichkeit, die Versickerung allgemeingültig und passend für alle
+            Fragestellungen zu modellieren, auch weil sie bei einem
+            tatsächlichen Starkregenereignis wesentlich vom
+            Niederschlagsgeschehen in dessen Vorfeld abhängt. Im schlimmsten
+            anzunehmenden Fall ist der Boden bereits vollständig mit Wasser
+            gesättigt oder an der Oberfläche vollständig ausgetrocknet. In
+            beiden Fällen würde es nicht zu einer relevanten Versickerung
+            kommen. Dieses Worst-Case-Szenario, das wir bei vorherigen
+            Simulationen bis einschließlich Version 2.0 angenommen haben, geben
+            wir jetzt zugunsten eines wahrscheinlicheren Geschehens auf, bei dem
+            doch ein gewisser Teil des Regenwassers versickert. Dieser Anteil
+            kann damit nicht mehr zu Überflutungen auf der Geländeoberfläche
+            beitragen. Ein wichtiger Grund für die Änderung unseres Ansatzes war
+            die bessere Vergleichbarkeit unserer Simulationen mit entsprechenden
+            Berechnungen für andere Städte. Wenn eine Stadt ein großes
+            &quot;grünes&quot; Wassereinzugsgebiet hat, also z. B. höher
+            gelegene Waldflächen, führt eine Vernachlässigung der Versickerung
+            zu deutlich unrealistischen Wassertiefen in den
+            Simulationsergebnissen. Daher berücksichtigt die Sweco GmbH, unser
+            Entwicklungspartner für die Simulationsberechnungen, mittlerweile
+            immer auch einen Lastfall mit Versickerungseffekt in ihren
+            Simulationsergebnissen.
           </p>
           <p>
-            Da nicht alle kleinräumigen Strukturen im Digitalen Geländemodell
-            (DGM1), das vom Land NRW zur Verfügung gestellt und für die
-            Simulationen verwendet wird, abgebildet werden können, bitten wir
-            Sie, dabei zu helfen, das DGM sukzessive zu verbessern, indem Sie
-            vermutete{" "}
+            <strong>
+              Auch mit dem Versickerungsansatz bleibt eine Tendenz zur lokalen
+              Überzeichnung der Wassertiefen, die sich bei einem realen Regen
+              der angenommenen Stärke einstellen würden, bestehen.
+            </strong>{" "}
+            Um diesem Umstand Rechnung zu tragen, geben wir bei der{" "}
             <a
+              class="renderAsLink"
+              onClick={() => setAppMenuActiveMenuSection("wasserstand")}
+            >
+              Abfrage der Wassertiefe oder der Fließgeschwindigkeit
+            </a>{" "}
+            ab einer berechneten Wassertiefe von 150 cm nur noch "größer als 150
+            cm" ({">"} 150 cm) und ab einer berechneten Fließgeschwindigkeit von
+            6 m/s nur noch "{">"} 6 m/s" als Ergebnis an.
+          </p>
+
+          <p>
+            Außerdem konnten wir die Wirkung des Kanalnetzes, das einen Teil des
+            Starkregens abführt, nur vereinfacht modellieren. Hierdurch kann es
+            zu Abweichungen zwischen den Simulationsergebnissen und den
+            Überflutungen durch ein reales Regenereignis kommen.
+          </p>
+
+          <p>
+            Auch das Digitale Geländemodell (DGM), das für die Simulationen als
+            Grundlage dient, kann Fehler aufweisen. Helfen Sie uns dabei, das
+            DGM sukzessive zu verbessern, indem Sie uns vermutete{" "}
+            <a
+              class="renderAsLink"
               onClick={() => setAppMenuActiveMenuSection("modellfehlermelden")}
             >
               Fehler im Geländemodell melden
             </a>
-            ! Bedenken Sie, dass es sein kann, dass ein neues Gebäude in den
+            ! Zuletzt kann es sein, dass ein bestehendes Gebäude in den
             Simulationen nicht berücksichtigt wurde, weil es zum Zeitpunkt der
             Datenbereitstellung für die Simulationsberechnungen noch nicht im
-            Liegenschaftskataster nachgewiesen war oder ggf. ein Gebäude
-            inzwischen abgerissen wurde.
+            Liegenschaftskataster nachgewiesen war.
           </p>
         </div>
       }
